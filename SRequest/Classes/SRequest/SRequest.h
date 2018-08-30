@@ -13,7 +13,16 @@
 
 @class SRequest;
 
-@interface SRequest : SBaseHttpRequest
+
+@protocol SRequestResultHandleProtocol <NSObject>
+
+@optional
+- (id)requestHandleSuccessData:(id)data;
+- (void)requestHandleFailedData:(NSError *)error;
+
+@end
+
+@interface SRequest : SBaseHttpRequest<SRequestResultHandleProtocol>
 
 @property (nonatomic, strong) id sr_RequestParams;
 
@@ -38,6 +47,7 @@
 @property (nonatomic, copy) void(^failed)(NSError *error);
 
 @property (nonatomic, copy) void(^progress)(NSProgress *progress);
+
 
 + (instancetype)requestWithMethod:(SHttpRequestActionMethod)method url:(NSString *)url params:(NSDictionary *)params success:(void (^)(id data))success failed:(void (^)(NSError *error))failed;
 

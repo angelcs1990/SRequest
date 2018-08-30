@@ -89,14 +89,22 @@
 - (void)httpRequest:(SBaseHttpRequest *)request onFinishedData:(id)data
 {
 //    NSAssert(nil, @"子类必须实现");
+    id retData = data;
+    if ([self respondsToSelector:@selector(requestHandleSuccessData:)]) {
+        retData = [self requestHandleSuccessData:data];
+    }
     if (self.success) {
-        self.success(data);
+        self.success(retData);
     }
 }
 
 - (void)httpRequest:(SBaseHttpRequest *)request onFailed:(NSError *)error
 {
 //    NSAssert(nil, @"子类必须实现");
+//    NSError *retError = error;
+    if ([self respondsToSelector:@selector(requestHandleFailedData:)]) {
+        [self requestHandleFailedData:error];
+    }
     if (self.failed) {
         self.failed(error);
     }

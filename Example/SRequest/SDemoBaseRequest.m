@@ -52,9 +52,15 @@
     return retDic;
 }
 
-- (NSString *)requestBaseUrl
+
+- (id)requestHandleSuccessData:(id)data
 {
-    return @"https://www.sojson.com";
+    NSLog(@"截取到中间");
+    return data;
 }
+//- (NSString *)requestBaseUrl
+//{
+//    return @"https://www.sojson.com";
+//}
 
 @end

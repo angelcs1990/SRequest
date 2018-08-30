@@ -18,9 +18,8 @@
   "platforms": {
     "ios": "9.0"
   },
-  "ios": {
-    "vendored_frameworks": "Binary/SRequest-0.1.0/ios/SRequest.framework"
-  },
+  "source_files": "SRequest/Classes/**/*",
+  "public_header_files": "SRequest/Classes/**/*.h",
   "preserve_paths": [
     "SRequest/Classes/**/*",
     "Binary/SRequest-0.1.0/ios/SRequest.framework"

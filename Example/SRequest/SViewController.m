@@ -31,6 +31,7 @@
 }
 
 - (IBAction)btnDidClicked:(id)sender {
+    [SRequestConfig shareInstance].reqBaseUrl = @"https://www.sojson.com";
     [[SDemoTestRequest Get]
      setNeedToken]
     .chain
