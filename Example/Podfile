@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'SRequest_Example' do
+  pod 'SRequest', :path => '../'
+
+end

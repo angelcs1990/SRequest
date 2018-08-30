@@ -1,0 +1,6 @@
+framework module SRequest {
+  umbrella header "SRequest-umbrella.h"
+
+  export *
+  module * { export * }
+}
