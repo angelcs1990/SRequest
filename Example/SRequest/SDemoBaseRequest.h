@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import <SRequest/SRequest-umbrella.h>
+//#import <SRequest/SRequest-umbrella.h>
+#import <SRequest/SRequest.h>
+#import <SRequest/SRequest+Chain.h>
 
 @interface SDemoBaseRequest : SRequest
 

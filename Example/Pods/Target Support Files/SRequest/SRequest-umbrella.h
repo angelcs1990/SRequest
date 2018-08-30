@@ -11,11 +11,12 @@
 #endif
 
 #import "SBaseHttpRequest.h"
-#import "SRequestAgent.h"
-#import "SRequestConfig.h"
-#import "SRequestMacro.h"
 #import "SRequest+Chain.h"
 #import "SRequest.h"
+#import "SRequestAgent.h"
+#import "SRequestChain.h"
+#import "SRequestConfig.h"
+#import "SRequestMacro.h"
 
 FOUNDATION_EXPORT double SRequestVersionNumber;
 FOUNDATION_EXPORT const unsigned char SRequestVersionString[];
