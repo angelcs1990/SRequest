@@ -43,4 +43,13 @@
     return config;
 }
 
+- (BOOL)debugOpen
+{
+#ifndef RELEASE
+    return _debugOpen;
+#else
+    return NO;
+#endif
+}
+
 @end

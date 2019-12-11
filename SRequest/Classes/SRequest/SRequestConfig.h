@@ -26,4 +26,7 @@ SFinal_Class @interface SRequestConfig : NSObject
 
 @property (nonatomic, copy) NSString *reqDownloadPath;
 
+/**打开输出*/
+@property (nonatomic, assign) BOOL debugOpen;
+
 @end

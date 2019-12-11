@@ -26,6 +26,7 @@
 
 #import "SDemoBaseRequest.h"
 
+#import <AFNetworking/AFNetworking.h>
 @interface SDemoBaseRequest ()
 
 @end
@@ -52,6 +53,13 @@
     return retDic;
 }
 
+
+- (void)requestExtendSet:(id)mgr
+{
+    if ([mgr isKindOfClass:[AFHTTPSessionManager class]]) {
+        
+    }
+}
 
 - (id)requestHandleSuccessData:(id)data
 {

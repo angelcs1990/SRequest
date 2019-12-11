@@ -47,7 +47,9 @@
 
 - (void)dealloc
 {
-    NSLog(@"dealloc f");
+    if ([SRequestConfig shareInstance].debugOpen) {    
+        NSLog(@"SRequest==%@结束", self.requestUrl);
+    }
 }
 
 #pragma mark - SHttpResponseProtocol
@@ -70,7 +72,6 @@
 - (void)startRequest
 {
     [[SRequestAgent shareInstance] startRequest:self];
-//    [self httpRequest:self onFinishedData:@"ssss"];
 }
 
 - (void)cancelRequest
