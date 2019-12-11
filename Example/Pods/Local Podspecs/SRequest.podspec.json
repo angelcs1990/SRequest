@@ -1,6 +1,6 @@
 {
   "name": "SRequest",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "网络请求类.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/angelcs1990/SRequest",
@@ -13,16 +13,17 @@
   },
   "source": {
     "git": "https://github.com/angelcs1990/SRequest.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "SRequest/Classes/**/*",
-  "public_header_files": "SRequest/Classes/**/*.h",
+  "ios": {
+    "vendored_frameworks": "Binary/SRequest-0.1.1/ios/SRequest.framework"
+  },
   "preserve_paths": [
     "SRequest/Classes/**/*",
-    "Binary/SRequest-0.1.0/ios/SRequest.framework"
+    "Binary/SRequest-0.1.1/ios/SRequest.framework"
   ],
   "dependencies": {
     "AFNetworking": [
